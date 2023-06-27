@@ -1,0 +1,43 @@
+doctype html
+html
+  head
+    meta charset="utf-8"
+    link href="https://fonts.googleapis.com/css?family=Open+Sans|Space+Mono:700" rel="stylesheet"
+    link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap" rel="stylesheet"
+    link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet"
+    link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"
+    link type="text/css" rel="stylesheet" href="application.css"
+    title Donnybrook Discord Bot
+    meta[name="msapplication-TileColor" content="#da532c"]
+    meta[name="msapplication-config" content="/images/icons/browserconfig.xml"]
+    meta[name="theme-color" content="#ffffff"]
+    script src="https://code.jquery.com/jquery-1.12.0.min.js"
+    script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"
+    script src="https://unpkg.com/feather-icons"
+    script src="application.js"
+
+  body
+
+    nav
+      .nav-wrapper.red.base
+        a.brand-logo href="/" Donnybrook
+        ul#nav-mobile.right.hide-on-med-and-down
+          li
+            a href="/" Home
+          li
+            a href="commands.html" Commands
+
+    == yield
+
+    footer.page-footer.red
+      .container
+        .row
+          .col.l6.s12
+            h5.white-text Donnybrook
+          .col.l4.s12
+            ul
+              li
+                a.grey-text.text-lighten-3 href="https://gitlab.com/MediaMagnet/donnybrook" Sourcecode
+      .footer-copyright
+        .container
+          | Open Source under the MIT license 2019
