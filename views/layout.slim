@@ -3,41 +3,69 @@ html
   head
     meta charset="utf-8"
     link href="https://fonts.googleapis.com/css?family=Open+Sans|Space+Mono:700" rel="stylesheet"
-    link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap" rel="stylesheet"
+    link href="https://fonts.googleapis.com/css?family=Sintony&display=swap" rel="stylesheet"
     link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet"
     link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"
     link type="text/css" rel="stylesheet" href="application.css"
-    title Donnybrook Discord Bot
+    title Turbo Assisted Shipping
     meta[name="msapplication-TileColor" content="#da532c"]
     meta[name="msapplication-config" content="/images/icons/browserconfig.xml"]
     meta[name="theme-color" content="#ffffff"]
     script src="https://code.jquery.com/jquery-1.12.0.min.js"
     script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"
-    script src="https://unpkg.com/feather-icons"
+    script src="https://unpkg.com/feather-icons@4.29.0/dist/feather.min.js"
     script src="application.js"
 
   body
 
     nav
-      .nav-wrapper.red.base
-        a.brand-logo href="/" Donnybrook
+      .nav-wrapper.orange.darken-3
+        a.brand-logo[href="/"]
+          img[src="images/logo.png"  height="60px" style="padding-left:10px;padding-right:15px;"]
+
         ul#nav-mobile.right.hide-on-med-and-down
           li
             a href="/" Home
           li
-            a href="commands.html" Commands
+            a href="commands.html" Guides
+          li
+            a href="/" Carriers
+          li
+            a href="https://inara.cz/elite/squadron/11073/" INARA
+
+    .fixed-action-btn.direction-top[style="bottom: 45px; right: 24px;"]
+      a.btn-floating.btn-large.red
+        i.material-icons
+          | mode_edit
+      ul
+        li
+          a.btn-floating.red[style="opacity: 0; transform: scale(0.4) translateY(40px) translateX(0px);"]
+            i.material-icons
+              | insert_chart
+        li
+          a.btn-floating.yellow.darken-1[style="opacity: 0; transform: scale(0.4) translateY(40px) translateX(0px);"]
+            i.material-icons
+              | format_quote
+        li
+          a.btn-floating.green[style="opacity: 0; transform: scale(0.4) translateY(40px) translateX(0px);"]
+            i.material-icons
+              | publish
+        li
+          a.btn-floating.blue[style="opacity: 0; transform: scale(0.4) translateY(40px) translateX(0px);"]
+            i.material-icons
+              | attach_file
 
     == yield
 
-    footer.page-footer.red
+    footer.page-footer.orange.darken-3
       .container
         .row
           .col.l6.s12
-            h5.white-text Donnybrook
+            h5.white-text Ex Astris Commeatus
           .col.l4.s12
             ul
               li
-                a.grey-text.text-lighten-3 href="https://gitlab.com/MediaMagnet/donnybrook" Sourcecode
+                a.grey-text.text-lighten-3 href="https://inara.cz/elite/squadron/11073/" Inara
       .footer-copyright
         .container
-          | Open Source under the MIT license 2019
+          | 2023 Turbo Assisted Shipping
