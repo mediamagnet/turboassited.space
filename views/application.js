@@ -1,7 +1,7 @@
 (function($){
     $(function(){
 
-        $('.fixed-action-btn.click-to-toggle').floatingActionButton({
+        $('.fixed-action-btn').floatingActionButton({
             direction: 'top',
             hoverEnabled: true
           });
