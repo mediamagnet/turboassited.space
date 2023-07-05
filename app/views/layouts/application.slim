@@ -1,0 +1,56 @@
+doctype html
+html
+  head
+    meta charset="utf-8"
+    link href="https://fonts.googleapis.com/css?family=Open+Sans|Space+Mono:700" rel="stylesheet"
+    link href="https://fonts.googleapis.com/css?family=Sintony&display=swap" rel="stylesheet"
+    link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet"
+    link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"
+    link type="text/css" rel="stylesheet" href="assets/application.css"
+    title Turbo Assisted Shipping
+    meta[name="msapplication-TileColor" content="#da532c"]
+    meta[name="msapplication-config" content="/images/icons/browserconfig.xml"]
+    meta[name="theme-color" content="#ffffff"]
+    script src="https://code.jquery.com/jquery-1.12.0.min.js"
+    script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"
+    script src="https://unpkg.com/feather-icons@4.29.0/dist/feather.min.js"
+    script type="module" src="assets/application.js"
+    script
+      |  (function($){ $(function(){ $('.fixed-action-btn').floatingActionButton({ direction: 'top', hoverEnabled: true }); $('.sidenav').sidenav(); $('.parallax').parallax(); $('.scrollspy').scrollSpy();}); })(jQuery);      
+
+  body.light-mode
+
+    nav
+      .nav-wrapper.orange.darken-3
+        a.brand-logo[href="/"]
+          img[src="assets/logo.png"  height="60px" style="padding-left:10px;padding-right:15px;"]
+          
+        ul#nav-mobile.right.hide-on-med-and-down
+          li
+
+          li
+            a href="/" Home
+          li
+            a href="#" Guides
+          li
+            = link_to "Carriers", carriers_path
+              
+          li
+            a href="https://inara.cz/elite/squadron/11073/" INARA
+
+    == yield
+
+    footer.page-footer.orange.darken-3
+      .container
+        .row
+          .col.l6.s12
+            h5.white-text Ex Astris Commeatus
+          .col.l4.s12
+            ul
+              li
+                a.grey-text.text-lighten-3 href="https://inara.cz/elite/squadron/11073/" Inara
+      .footer-copyright
+        .container
+          | 2023 Turbo Assisted Shipping
+script
+  | feather.replace()
