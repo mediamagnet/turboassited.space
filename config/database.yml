@@ -14,7 +14,7 @@ default: &default
   encoding: utf8mb4
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: turbo
-  password: a287593A
+  password: s287593S!
   socket: /var/run/mysqld/mysqld.sock
 
 development:
