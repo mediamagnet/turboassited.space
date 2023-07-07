@@ -89,3 +89,7 @@ gem "underscore-rails", "~> 1.8"
 
 gem "devise", "~> 4.9"
 gem "cssbundling-rails"
+
+gem "paper_trail", "~> 14.0"
+
+gem "paper_trail-association_tracking", "~> 2.2"

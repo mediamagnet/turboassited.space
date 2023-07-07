@@ -1,6 +1,18 @@
 Rails.application.routes.draw do
+  devise_for :users, :path_names => { :sign_up => "register", 
+                                      :sign_in => "login", 
+                                      :sign_out => "logout",
+                                      :settings => "settings" }
+
+  devise_scope :user do
+    get "login", :to => "devise/sessions#new"
+    get "register", :to => "devise/registrations#new"
+    get "settings", :to => "devise/registrations#edit"
+    get "logout",   :to => "devise/sessions#destroy"
+  
+  end 
+
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  devise_for :admins
   root 'static#home'
   get '/carriers', to: 'static#carriers'
   get '/staff', to: 'static#staff'

@@ -2,11 +2,12 @@ doctype html
 html
   head
     meta charset="utf-8"
-    link href="https://fonts.googleapis.com/css?family=Open+Sans|Space+Mono:700" rel="stylesheet"
-    link href="https://fonts.googleapis.com/css?family=Sintony&display=swap" rel="stylesheet"
+    link[rel="preconnect" href="https://fonts.googleapis.com"]
+    link[rel="preconnect" href="https://fonts.gstatic.com" crossorigin]
+    link href="https://fonts.googleapis.com/css2?family=Sintony&display=swap" rel="stylesheet"
     link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet"
     link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"
-    link type="text/css" rel="stylesheet" href="assets/application.css"
+    link type="text/css" rel="stylesheet" href="../assets/application.css"
     title Turbo Assisted Shipping
     meta[name="msapplication-TileColor" content="#da532c"]
     meta[name="msapplication-config" content="/images/icons/browserconfig.xml"]
@@ -14,16 +15,17 @@ html
     script src="https://code.jquery.com/jquery-1.12.0.min.js"
     script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"
     script src="https://unpkg.com/feather-icons@4.29.0/dist/feather.min.js"
-    script type="module" src="assets/application.js"
+    script type="module" src="../assets/application.js"
     script
-      |  (function($){ $(function(){ $('.fixed-action-btn').floatingActionButton({ direction: 'top', hoverEnabled: true }); $('.sidenav').sidenav(); $('.parallax').parallax(); $('.scrollspy').scrollSpy();}); })(jQuery);      
+      |  (function($){ $(function(){ $('.fixed-action-btn').floatingActionButton({ direction: 'top', hoverEnabled: true }); $('.sidenav').sidenav(); $('.parallax').parallax(); $('.scrollspy').scrollSpy(); $('.chips').chips();}); })(jQuery);
+    
 
-  body.light-mode
+  body[style="font-family: 'Sintony', sans-serif;"]
 
     nav
       .nav-wrapper.orange.darken-3
         a.brand-logo[href="/"]
-          img[src="assets/logo.png"  height="60px" style="padding-left:10px;padding-right:15px;"]
+          img[src="../assets/logo.png"  height="60px" style="padding-left:10px;padding-right:15px;"]
           
         ul#nav-mobile.right.hide-on-med-and-down
           li
@@ -37,7 +39,31 @@ html
               
           li
             a href="https://inara.cz/elite/squadron/11073/" INARA
-
+    .container
+      - if notice
+        .alert.chip.blue.lighten-4.blue-text.text-darken-3.pulse[style="padding: 10px 10px; width: 80%; height: 50px;"]
+          .card-content
+            p
+              i.material-icons[style="padding-left: 10%;"]
+                | info
+              span[style="padding-left: 25%;"]
+                = notice
+              span[style="padding-left: 10%;"]
+                i.close.material-icons
+                  | close
+      - if alert
+        .alert.chip.amber.lighten-4.brown-text.pulse[style="padding: 10px 10px; width: 80%; height: 50px;"]
+          .card-content
+            p
+              i.material-icons[style="padding-left: 10%;"]
+                | report_problem 
+              span[style="padding-left: 25%;"]
+                = alert
+              span[style="padding-left: 10%;"]
+                i.close.material-icons
+                  | close
+          
+      
     == yield
 
     footer.page-footer.orange.darken-3

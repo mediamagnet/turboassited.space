@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/railsadminteam/rails_admin.git
-  revision: da4800420cd377960b6f20b94b97aa49e4bf94e0
+  revision: e158beb6a42ee74c7f90807186f5b141e7b20547
   specs:
     rails_admin (3.1.2)
       activemodel-serializers-xml (>= 1.0)
@@ -124,7 +124,7 @@ GEM
       actionpack (>= 6.0.0)
       railties (>= 6.0.0)
     io-console (0.6.0)
-    irb (1.7.0)
+    irb (1.7.1)
       reline (>= 0.3.0)
     jbuilder (2.11.5)
       actionview (>= 5.0.0)
@@ -173,9 +173,14 @@ GEM
     net-smtp (0.3.3)
       net-protocol
     nio4r (2.5.9)
-    nokogiri (1.15.2-x86_64-linux)
+    nokogiri (1.15.3-x86_64-linux)
       racc (~> 1.4)
     orm_adapter (0.5.0)
+    paper_trail (14.0.0)
+      activerecord (>= 6.0)
+      request_store (~> 1.4)
+    paper_trail-association_tracking (2.2.1)
+      paper_trail (>= 12.0)
     public_suffix (5.0.1)
     puma (5.6.6)
       nio4r (~> 2.0)
@@ -215,6 +220,8 @@ GEM
     regexp_parser (2.8.1)
     reline (0.3.5)
       io-console (~> 0.5)
+    request_store (1.5.1)
+      rack (>= 1.4)
     responders (3.1.0)
       actionpack (>= 5.2)
       railties (>= 5.2)
@@ -297,6 +304,8 @@ DEPENDENCIES
   jquery-rails (~> 4.6)
   materialize-sass (~> 1.0)
   mysql2 (~> 0.5)
+  paper_trail (~> 14.0)
+  paper_trail-association_tracking (~> 2.2)
   puma (~> 5.0)
   rails (~> 7.0.6)
   rails_admin (~> 3.1)!
