@@ -17,66 +17,32 @@ html
     script src="https://unpkg.com/feather-icons@4.29.0/dist/feather.min.js"
     script type="module" src="../assets/application.js"
     script
-      |  (function($){ $(function(){ $('.fixed-action-btn').floatingActionButton({ direction: 'top', hoverEnabled: true }); $('.sidenav').sidenav(); $('.parallax').parallax(); $('.scrollspy').scrollSpy(); $('.chips').chips();}); })(jQuery);
-    
+      |  (function($){ $(function(){ $('.fixed-action-btn').floatingActionButton({ direction: 'left', hoverEnabled: true }); $('.sidenav').sidenav(); $('.parallax').parallax(); $('.scrollspy').scrollSpy(); $('.chips').chips();}); })(jQuery);
+    script[src="https://cdn.tiny.cloud/1/#{$apikey}/tinymce/5/tinymce.min.js" referrerpolicy="origin"]
+    script
+      |  tinymce.init({
+        selector: '.editormce',
+        height: 500,
+        menubar: false,
+        plugins: [
+          'image autoresize code advlist autolink lists link image charmap print preview anchor',
+          'searchreplace visualblocks code fullscreen',
+          'insertdatetime media table paste code help wordcount'
+          ],
+        toolbar: 'undo redo | formatselect |' + ' bold italic backcolor | alignleft aligncenter' + 
+                 'alignright alignjustify | bullist numlist outdent indent |' + 
+                 'removeformat | help | code | image',
+        images_upload_url: '/uploader/image',
+        images_upload_credentials: true,
+        block_formats: 'Paragraph=p; Heading 2=h2; Heading 3=h3; Heading 4=h4; Heading 5=h5; Heading 6=h6'
+        });
 
   body[style="font-family: 'Sintony', sans-serif;"]
-
-    nav
-      .nav-wrapper.orange.darken-3
-        a.brand-logo[href="/"]
-          img[src="../assets/logo.png"  height="60px" style="padding-left:10px;padding-right:15px;"]
-          
-        ul#nav-mobile.right.hide-on-med-and-down
-          li
-
-          li
-            a href="/" Home
-          li
-            a href="#" Guides
-          li
-            = link_to "Carriers", carriers_path
-              
-          li
-            a href="https://inara.cz/elite/squadron/11073/" INARA
-    .container
-      - if notice
-        .alert.chip.blue.lighten-4.blue-text.text-darken-3.pulse[style="padding: 10px 10px; width: 80%; height: 50px;"]
-          .card-content
-            p
-              i.material-icons[style="padding-left: 10%;"]
-                | info
-              span[style="padding-left: 25%;"]
-                = notice
-              span[style="padding-left: 10%;"]
-                i.close.material-icons
-                  | close
-      - if alert
-        .alert.chip.amber.lighten-4.brown-text.pulse[style="padding: 10px 10px; width: 80%; height: 50px;"]
-          .card-content
-            p
-              i.material-icons[style="padding-left: 10%;"]
-                | report_problem 
-              span[style="padding-left: 25%;"]
-                = alert
-              span[style="padding-left: 10%;"]
-                i.close.material-icons
-                  | close
-          
-      
+  
+    = render partial: 'layouts/topnav'
+    = render partial: 'layouts/auth'
     == yield
-
-    footer.page-footer.orange.darken-3
-      .container
-        .row
-          .col.l6.s12
-            h5.white-text Ex Astris Commeatus
-          .col.l4.s12
-            ul
-              li
-                a.grey-text.text-lighten-3 href="https://inara.cz/elite/squadron/11073/" Inara
-      .footer-copyright
-        .container
-          | 2023 Turbo Assisted Shipping
+    = render partial: 'layouts/fab'
+    = render partial: 'layouts/footer'
 script
   | feather.replace()

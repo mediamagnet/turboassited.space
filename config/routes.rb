@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
+  resources :guides
   devise_for :users, :path_names => { :sign_up => "register", 
                                       :sign_in => "login", 
                                       :sign_out => "logout",
                                       :settings => "settings" }
-
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  
   devise_scope :user do
     get "login", :to => "devise/sessions#new"
     get "register", :to => "devise/registrations#new"
@@ -12,7 +14,7 @@ Rails.application.routes.draw do
   
   end 
 
-  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  
   root 'static#home'
   get '/carriers', to: 'static#carriers'
   get '/staff', to: 'static#staff'
@@ -20,4 +22,5 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+  post 'uploader/image', to: 'uploader#image'
 end

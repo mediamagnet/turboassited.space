@@ -1,0 +1,12 @@
+p style="color: green" = notice
+
+h1 Guides
+
+#guides
+  - @guides.each do |guide|
+    = link_to "#{guide.title}", guide
+    br
+      = "Summary: " + guide.summary
+p
+
+= link_to "New guide", new_guide_path

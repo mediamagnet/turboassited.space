@@ -1,0 +1,22 @@
+= form_with(model: @guide) do |form|
+  - if @guide.errors.any?
+    div style="color: red"
+      h2 = "#{pluralize(@guide.errors.count, "error")} prohibited this guide from being saved:"
+      ul
+        - @guide.errors.each do |error|
+          li = error.full_message
+
+  div
+    = form.label :title, style: "display: block"
+    = form.text_field :title
+
+  div
+    = form.label :summary, style: "display: block"
+    = form.text_field :summary
+
+  div
+    = form.label :body, style: "display: block"
+    = form.text_area :body, {:class => "editormce"}
+
+  div
+    = form.submit

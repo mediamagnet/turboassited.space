@@ -46,7 +46,7 @@ gem "bootsnap", require: false
 # gem "sassc-rails"
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
-# gem "image_processing", "~> 1.2"
+gem "image_processing", "~> 1.2"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
@@ -93,3 +93,7 @@ gem "cssbundling-rails"
 gem "paper_trail", "~> 14.0"
 
 gem "paper_trail-association_tracking", "~> 2.2"
+
+gem "material_icons", "~> 4.0"
+
+gem "tinymce-rails", "~> 6.6"

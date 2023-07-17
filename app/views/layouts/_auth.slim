@@ -1,0 +1,31 @@
+- if notice
+  .navbar-fixed.blue.lighten-4.blue-text.text-darken-3.pulse
+    .row 
+      .col.s12
+        p
+          span.left
+          .col
+            i.material-icons
+              | info
+          .col
+            = notice
+          span.right[name="close" onclick="this.parentNode.parentNode.parentNode.remove(); return false;"]
+            a.btn.btn-small.btn-flat
+              .col
+                | Dismiss
+
+- if alert
+  .navbar-fixed.amber.lighten-4.brown-text.pulse
+    .row 
+      .col.s12
+        p
+          span.left
+            .col
+              i.material-icons
+                | warning
+            .col[style="margin:auto;width:50%;padding:5px;"]
+              = alert
+          span.right[name="close" onclick="this.parentNode.parentNode.parentNode.remove(); return false;"]
+            a.btn.btn-small.btn-flat
+              .col
+                | Dismiss
