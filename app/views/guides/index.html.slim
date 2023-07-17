@@ -9,4 +9,7 @@ h1 Guides
       = "Summary: " + guide.summary
 p
 
-= link_to "New guide", new_guide_path
+= button_to new_guide_path, {:class => "btn green waves-effect waves-green"} do
+  = mi.shape(:edit_note).outlined
+  span.center
+    | New Guide
