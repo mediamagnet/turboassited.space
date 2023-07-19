@@ -1,0 +1,36 @@
+ @import url('https://fonts.googleapis.com/css2?family=Sintony&display=swap');
+
+
+ .parallax-container {
+   height: 500px;
+ }
+ code {
+   font-family: "Sintony", sans-serif;
+ }
+ 
+ body {
+  font-family: 'Sintony', sans-serif;
+ }
+
+ .alert {
+	.card-content {
+		span {
+			font-weight: bold;
+			font-size: 1.1em;
+			margin-right:4px;
+		}
+		.material-icons {
+			font-size: 1.5em;
+			position: relative;
+			top: 5px;
+			margin-right: 0.5em;
+		}	
+	}
+}	
+
+.center {
+  margin: auto;
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px;
+}

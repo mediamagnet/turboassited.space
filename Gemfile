@@ -73,7 +73,6 @@ end
 
 gem "slim-rails", "~> 3.6"
 
-gem "sass-rails", "~> 6.0"
 
 gem 'rails_admin', '~> 3.1', git: 'https://github.com/railsadminteam/rails_admin.git'
 
@@ -81,7 +80,6 @@ gem "jquery-rails", "~> 4.6"
 
 gem "sweetalert2", "~> 7.25"
 
-gem "materialize-sass", "~> 1.0"
 
 gem "sweet-alert2-rails", "~> 0.1.0"
 
