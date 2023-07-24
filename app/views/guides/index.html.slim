@@ -2,6 +2,7 @@ p style="color: green" = notice
 
 h1 Guides
 
+
 #guides
   - @guides.each do |guide|
     = link_to "#{guide.title}", guide
@@ -9,7 +10,8 @@ h1 Guides
       = "Summary: " + guide.summary
 p
 
-= button_to new_guide_path, {:class => "btn green waves-effect waves-green"} do
-  = mi.shape(:edit_note).outlined
-  span.center
-    | New Guide
+- if user_signed_in?
+  = button_to new_guide_path, {method: :get, :class => "btn green waves-effect waves-green"} do
+    = mi.shape(:edit_note).outlined
+    span.center
+      | New Guide

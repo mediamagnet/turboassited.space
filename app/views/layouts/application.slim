@@ -8,6 +8,7 @@ html
     link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet"
     link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"
     = stylesheet_link_tag "application", :media => "all"
+    = javascript_include_tag "application", "data-turbo-track": "reload", defer: true, type: "module"
     title Turbo Assisted Shipping
     meta[name="msapplication-TileColor" content="#da532c"]
     meta[name="msapplication-config" content="/images/icons/browserconfig.xml"]
@@ -15,8 +16,8 @@ html
     script src="https://code.jquery.com/jquery-1.12.0.min.js"
     script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"
     script src="https://unpkg.com/feather-icons@4.29.0/dist/feather.min.js"
-    script type="module" src="../assets/application.js"
-    script
+    // script type="module" src="../assets/application.js"
+    // script
       |  (function($){ $(function(){ $('.fixed-action-btn').floatingActionButton({ direction: 'left', hoverEnabled: true }); $('.sidenav').sidenav(); $('.parallax').parallax(); $('.scrollspy').scrollSpy(); $('.chips').chips();}); })(jQuery);
     script[src="https://cdn.tiny.cloud/1/#{$apikey}/tinymce/5/tinymce.min.js" referrerpolicy="origin"]
     script
@@ -39,10 +40,10 @@ html
 
   body
   
-    = render partial: 'layouts/topnav'
-    = render partial: 'layouts/auth'
+    = render partial: 'partials/topnav'
+    = render partial: 'partials/auth'
     == yield
-    = render partial: 'layouts/fab'
-    = render partial: 'layouts/footer'
+    = render partial: 'partials/fab'
+    = render partial: 'partials/footer'
 script
   | feather.replace()

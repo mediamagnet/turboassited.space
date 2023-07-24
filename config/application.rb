@@ -12,6 +12,7 @@ module TurboassistedSpaceRails
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
     config.hosts << 'talesfrom.live'
+    config.hosts << 'turboassisted.space'
     config.time_zone = 'Central Time (US & Canada)'
 
     # Configuration for the application, engines, and railties goes here.

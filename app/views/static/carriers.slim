@@ -2,14 +2,18 @@
   .parallax
     img src="assets/bg-a.png" alt="Haiku waits at a planet."
         
-.section.blue-grey.lighten-3
+.section
   .row
     .col.s12.m9.l10
       #haiku.section.scrollspy
         .row
           .col.s2
           .col.s4
-            img [src="assets/haikunew.png" alt="Songbird's Haiku Logo" style="height: 250px;position: static;"]
+            .carousel
+              a.carousel-item[href="#logo"]
+                img [src="assets/haikunew.png" alt="Songbird's Haiku Logo" style="height: 250px;position: static;"]
+              a.carousel-item[href="#picture"]
+                img [src="assets/bg-b.png" alt="Picture of carrier" style="height: 250px;position: static;"]
           .col.s6
             h3
               i
@@ -35,7 +39,7 @@
   .parallax
     img src="assets/bg-b.png" alt="Haiku in front of a neutron star."
 
-.section.blue-grey.lighten-3
+.section
   .row
     .col.s12.m9.l10
       #haiku.section.scrollspy

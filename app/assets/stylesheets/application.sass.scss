@@ -1,17 +1,12 @@
- @import url('https://fonts.googleapis.com/css2?family=Sintony&display=swap');
+ /* @import url('https://fonts.googleapis.com/css2?family=Sintony&display=swap'); */
 
-
- .parallax-container {
-   height: 500px;
+.parallax-container {
+   height: 300px;
  }
  code {
    font-family: "Sintony", sans-serif;
  }
  
- body {
-  font-family: 'Sintony', sans-serif;
- }
-
  .alert {
 	.card-content {
 		span {
@@ -31,6 +26,34 @@
 .center {
   margin: auto;
   width: 50%;
-  border: 3px solid green;
   padding: 10px;
+}
+
+
+$transition-effects: color 2s ease, background-color 2s ease;
+
+body {
+	font-family: 'Sintony', sans-serif;
+	background-color: #1e282d;
+	color: #87a0ad;
+	transition: $transition-effects;
+	.section {
+		background-color: #29363d;
+		color: #87a0ad;
+	}
+}
+/* width */
+/* Track */
+/* Handle */
+::-webkit-scrollbar {
+	height: 5px;
+	width: 5px;
+}
+::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 5px grey;
+	border-radius: 5px;
+}
+::-webkit-scrollbar-thumb {
+	background: rgb(95, 95, 95);
+	border-radius: 5px;
 }
