@@ -14,6 +14,8 @@ module TurboassistedSpaceRails
     config.hosts << 'talesfrom.live'
     config.hosts << 'turboassisted.space'
     config.time_zone = 'Central Time (US & Canada)'
+    config.server_timing = false
+    config.action_view.preload_links_header = false
 
     # Configuration for the application, engines, and railties goes here.
     #

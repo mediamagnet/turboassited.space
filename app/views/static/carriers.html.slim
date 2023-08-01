@@ -8,12 +8,13 @@
       #haiku.section.scrollspy
         .row
           .col.s2
-          .col.s4
-            .carousel
-              a.carousel-item[href="#logo"]
-                img [src="assets/haikunew.png" alt="Songbird's Haiku Logo" style="height: 250px;position: static;"]
-              a.carousel-item[href="#picture"]
-                img [src="assets/bg-b.png" alt="Picture of carrier" style="height: 250px;position: static;"]
+          .col.s4.slider
+           ul.slides
+              li
+                img.materialboxed.center[src="assets/haikunew.png" width="445" alt="Songbird's Haiku Logo" style="height:250px;width:250px;"]
+              li
+                img.materialboxed.center[src="assets/haikuimage.png", width="445" alt="Songbird's Haiku" style="width:445px;height:250px"]
+
           .col.s6
             h3
               i
@@ -46,7 +47,7 @@
         .row
           .col.s2
           .col.s4
-            img [src="assets/TashbotCarrierLogo.png" alt="Tashbot's Logo" style="height: 250px;position: static;"]
+            img.materialboxed[src="assets/TashbotCarrierLogo.png" width="250" alt="Tashbot's Logo"]
           .col.s6
             h3
               i

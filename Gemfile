@@ -4,16 +4,16 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby "3.1.0"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-gem "rails", "~> 7.0.6"
+gem "rails"
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
 # Use mysql as the database for Active Record
-gem "mysql2", "~> 0.5"
+gem "mysql2"
 
 # Use the Puma web server [https://github.com/puma/puma]
-gem "puma", "~> 5.0"
+gem "puma"
 
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem "importmap-rails"
@@ -46,7 +46,7 @@ gem "bootsnap", require: false
 # gem "sassc-rails"
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
-gem "image_processing", "~> 1.2"
+gem "image_processing"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
@@ -61,7 +61,7 @@ group :development do
   gem "rack-mini-profiler"
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
-  # gem "spring"
+  gem "spring"
 end
 
 group :test do
@@ -71,28 +71,28 @@ group :test do
   gem "webdrivers"
 end
 
-gem "slim-rails", "~> 3.6"
+gem "slim-rails"
 
 
 gem 'rails_admin', '~> 3.1', git: 'https://github.com/railsadminteam/rails_admin.git'
 
-gem "jquery-rails", "~> 4.6"
+gem "jquery-rails"
 
-gem "sweetalert2", "~> 7.25"
+gem "sweetalert2"
 
 
-gem "sweet-alert2-rails", "~> 0.1.0"
+gem "sweet-alert2-rails"
 
-gem "underscore-rails", "~> 1.8"
+gem "underscore-rails"
 
-gem "devise", "~> 4.9"
+gem "devise"
 gem "cssbundling-rails"
 
-gem "paper_trail", "~> 14.0"
+gem "paper_trail"
 
-gem "paper_trail-association_tracking", "~> 2.2"
+gem "paper_trail-association_tracking"
 
-gem "material_icons", "~> 4.0"
+gem "material_icons"
 
-gem "tinymce-rails", "~> 6.6"
-gem "jsbundling-rails", "~> 1.1"
+gem "tinymce-rails"
+gem "jsbundling-rails"

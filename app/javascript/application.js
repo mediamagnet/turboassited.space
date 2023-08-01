@@ -10,6 +10,12 @@ import "./controllers"
 document.addEventListener('DOMContentLoaded', function() {
 //    var elems = document.querySelectorAll('.fixed-action-btn');
 //    var instances = M.FloatingActionButton.init(elems, options);
+	function darkMode() {
+	  let body = document.querySelector('body');
+	  let mode = this.dataset.mode;
+	  body.dataset.theme = mode;
+	}
+	
   });
 	
 	(function($){
@@ -23,13 +29,15 @@ document.addEventListener('DOMContentLoaded', function() {
 				}
 			});
 	
-			$('.fixed-action-btn').floatingActionButton({
-					direction: 'top',
-					hoverEnabled: true
-				});
-			$('.sidenav').sidenav();
-			$('.parallax').parallax();
-			$('.carousel').carousel();
+			$('.fixed-action-btn').floatingActionButton({ direction: 'left', hoverEnabled: true }); 
+			$('.sidenav').sidenav(); 
+			$('.parallax').parallax(); 
+			$('.scrollspy').scrollSpy(); 
+			$('.slider').slider({height: 250, interval: 10000});
+			$('.chips').chips();
+			$('.materialboxed').materialbox();
 	
 		}); // end of document ready
 	})(jQuery); // end of jQuery name space%
+
+	

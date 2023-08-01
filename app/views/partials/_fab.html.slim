@@ -1,20 +1,18 @@
 .fixed-action-btn.horizontal[style="bottom: 45px; right: 45px;"]
   a.btn-floating.btn-large.red
-    i.material-icons
-      |  menu_open
+    i.material-symbols-outlined>menu_open
   ul
     li
       - if user_signed_in?
         = button_to destroy_user_session_path, { :method=>:delete, :class=>"btn-floating red waves-effect waves-red"} do
-          = mi.shape(:lock_open).outlined
+          i.material-symbols-outlined>lock_open
       - else
         = button_to new_user_session_path, {:class => "btn-floating green waves-effect waves-green"} do
-          = mi.shape(:key).outlined
+          i.material-symbols-outlined>key
     li
-      a.btn-floating.purple.disabled
-        i.material-icons
-          | brightness_4
+      a.btn-floating.purple.dark-toggle
+        i.material-symbols-outlined>brightness_4
     li
       - if user_signed_in?
         a.btn-floating.blue.waves-effect.waves-blue[href="/admin"]
-          = mi.shape(:admin_panel_settings).outlined
+          i.material-symbols-outlined>admin_panel_settings
