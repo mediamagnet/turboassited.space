@@ -5,6 +5,9 @@ p style="color: green" = notice
 div
   => link_to "Edit this guide", edit_guide_path(@guide)
   '|
-  =< link_to "Back to guides", guides_path
+  =< link_to "Back to guides", guides_path, data: {turbo: false}
 
-  = button_to "Destroy this guide", @guide, method: :delete
+  - if user_signed_in?
+    = button_to @guide, method: :delete, :class => "btn-red", data: { confirm: 'Are you sure?'} do
+      i.material-symbols-outlined>delete_forever
+      | Delete Guide

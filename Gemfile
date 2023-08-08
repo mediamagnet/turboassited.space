@@ -76,12 +76,7 @@ gem "slim-rails"
 
 gem 'rails_admin', '~> 3.1', git: 'https://github.com/railsadminteam/rails_admin.git'
 
-gem "jquery-rails"
-
-gem "sweetalert2"
-
-
-gem "sweet-alert2-rails"
+# gem "jquery-rails"
 
 gem "underscore-rails"
 
@@ -96,3 +91,5 @@ gem "material_icons"
 
 gem "tinymce-rails"
 gem "jsbundling-rails"
+
+gem "jquery-rails-cdn", "~> 1.2"

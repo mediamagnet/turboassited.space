@@ -15,6 +15,9 @@ class GuidesTest < ApplicationSystemTestCase
     click_on "New guide"
 
     fill_in "Body", with: @guide.body
+    fill_in "Category", with: @guide.category
+    fill_in "Coriolis", with: @guide.coriolis
+    fill_in "Edsy", with: @guide.edsy
     fill_in "Summary", with: @guide.summary
     fill_in "Title", with: @guide.title
     click_on "Create Guide"
@@ -28,6 +31,9 @@ class GuidesTest < ApplicationSystemTestCase
     click_on "Edit this guide", match: :first
 
     fill_in "Body", with: @guide.body
+    fill_in "Category", with: @guide.category
+    fill_in "Coriolis", with: @guide.coriolis
+    fill_in "Edsy", with: @guide.edsy
     fill_in "Summary", with: @guide.summary
     fill_in "Title", with: @guide.title
     click_on "Update Guide"

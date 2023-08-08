@@ -4,15 +4,15 @@
   ul
     li
       - if user_signed_in?
-        = button_to destroy_user_session_path, { :method=>:delete, :class=>"btn-floating red waves-effect waves-red"} do
+        = button_to destroy_user_session_path, { :method=>:delete, :class=>"btn-floating red waves-effect waves-red tooltipped", data: {position: "top", tooltip: "Logout"}} do
           i.material-symbols-outlined>lock_open
       - else
-        = button_to new_user_session_path, {:class => "btn-floating green waves-effect waves-green"} do
+        = button_to new_user_session_path, {:class => "btn-floating green waves-effect waves-green tooltipped" , data: {position: "top", tooltip: "Login"}} do
           i.material-symbols-outlined>key
     li
-      a.btn-floating.purple.dark-toggle
+      a.btn-floating.purple.dark-toggle.disabled
         i.material-symbols-outlined>brightness_4
     li
       - if user_signed_in?
-        a.btn-floating.blue.waves-effect.waves-blue[href="/admin"]
+        a.btn-floating.blue.waves-effect.waves-blue.tooltipped[href="/admin" data-position="top" data-tooltip="Admin Panel"]
           i.material-symbols-outlined>admin_panel_settings

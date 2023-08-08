@@ -3,15 +3,27 @@ p style="color: green" = notice
 h1 Guides
 
 
-#guides
+ul.collapsible
   - @guides.each do |guide|
-    = link_to "#{guide.title}", guide
+    li
+      .collapsible-header
+        i.material-symbols-outlined>menu_book
+          #{guide.title}
+      .collapsible-body
+        .span.darkfont
+          = guide.summary
+        .span
+          = button_to guide, {method: :get, :class => "btn-flat"} do
+            i.material-symbols-outlined>read_more
+            | Read More
+    
+/*    = link_to "#{guide.title}", guide
     br
-      = "Summary: " + guide.summary
+      = "Summary: " + guide.summary */
 p
 
 - if user_signed_in?
-  = button_to new_guide_path, {method: :get, :class => "btn green waves-effect waves-green"} do
+  = button_to new_guide_path, {method: :get, :class => "btn green waves-effect waves-green", data: {turbo: false}} do
     i.material-symbols-outlined>edit_note
     span.center
       | New Guide

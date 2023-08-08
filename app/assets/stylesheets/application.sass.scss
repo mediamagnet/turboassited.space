@@ -1,4 +1,4 @@
- /* @import url('https://fonts.googleapis.com/css2?family=Sintony&display=swap'); */
+ @import url('https://fonts.googleapis.com/css2?family=Sintony&display=swap');
 
 .parallax-container {
    height: 300px;
@@ -43,8 +43,16 @@ body {
 	}
 }
 
+.collapsible {
+	background-color: #87a0ad;
+}
+
+.darkfont {
+	color: #1e282d;
+}
+
 .slider .slides {
-	background-color: #29363d;
+	background-color: #29363d!important;
 }
 /* width */
 /* Track */

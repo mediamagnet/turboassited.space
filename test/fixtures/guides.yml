@@ -4,8 +4,14 @@ one:
   title: MyString
   summary: MyString
   body: MyText
+  coriolis: MyString
+  edsy: MyString
+  category: MyString
 
 two:
   title: MyString
   summary: MyString
   body: MyText
+  coriolis: MyString
+  edsy: MyString
+  category: MyString

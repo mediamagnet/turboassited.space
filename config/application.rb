@@ -16,6 +16,7 @@ module TurboassistedSpaceRails
     config.time_zone = 'Central Time (US & Canada)'
     config.server_timing = false
     config.action_view.preload_links_header = false
+    config.assets.precompile += ['jquery.js']
 
     # Configuration for the application, engines, and railties goes here.
     #

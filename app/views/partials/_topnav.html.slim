@@ -5,14 +5,13 @@ nav
 
       ul#nav-mobile.right.hide-on-med-and-down
         li
+          = link_to "Home", root_path, data: {turbo: false}
         li
-          a href="/" Home
+          = link_to "Guides", guides_path, data: {turbo: false}
         li
-          = link_to "Guides", guides_path
+          = link_to "Events", events_path, data: {turbo: false}
         li
-          = link_to "Staff", staff_path
-        li
-          = link_to "Carriers", carriers_path  
+          = link_to "Carriers", carriers_path, data: {turbo: false}
         li
           a href="https://inara.cz/elite/squadron/11073/" INARA
         

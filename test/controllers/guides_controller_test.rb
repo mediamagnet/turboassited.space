@@ -17,7 +17,7 @@ class GuidesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create guide" do
     assert_difference("Guide.count") do
-      post guides_url, params: { guide: { body: @guide.body, summary: @guide.summary, title: @guide.title } }
+      post guides_url, params: { guide: { body: @guide.body, category: @guide.category, coriolis: @guide.coriolis, edsy: @guide.edsy, summary: @guide.summary, title: @guide.title } }
     end
 
     assert_redirected_to guide_url(Guide.last)
@@ -34,7 +34,7 @@ class GuidesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update guide" do
-    patch guide_url(@guide), params: { guide: { body: @guide.body, summary: @guide.summary, title: @guide.title } }
+    patch guide_url(@guide), params: { guide: { body: @guide.body, category: @guide.category, coriolis: @guide.coriolis, edsy: @guide.edsy, summary: @guide.summary, title: @guide.title } }
     assert_redirected_to guide_url(@guide)
   end
 
