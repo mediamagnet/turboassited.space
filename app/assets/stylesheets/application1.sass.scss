@@ -1,4 +1,4 @@
- @import url('https://fonts.googleapis.com/css2?family=Sintony&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Sintony&display=swap');
 
 .parallax-container {
    height: 300px;
@@ -54,25 +54,28 @@ body {
 .slider .slides {
 	background-color: #29363d!important;
 }
-/* width */
-/* Track */
-/* Handle */
-::-webkit-scrollbar {
-	height: 5px;
-	width: 5px;
-}
-::-webkit-scrollbar-track {
-	box-shadow: inset 0 0 5px grey;
-	border-radius: 5px;
-}
-::-webkit-scrollbar-thumb {
-	background: rgb(95, 95, 95);
-	border-radius: 5px;
-}
 
-.material-symbols-outlined {
-	font-variation-settings: 'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 48;
-}
+:root {
+	--blue: #007bff;
+	--indigo: #6610f2;
+	--purple: #772953;
+	--pink: #e83e8c;
+	--red: #DF382C;
+	--orange: #E95420;
+	--yellow: #EFB73E;
+	--green: #38B44A;
+	--teal: #20c997;
+	--cyan: #17a2b8;
+	--white: #fff;
+	--gray: #868e96;
+	--gray-dark: #333;
+	--primary: #E95420;
+	--secondary: #AEA79F;
+	--success: #38B44A;
+	--info: #17a2b8;
+	--warning: #EFB73E;
+	--danger: #DF382C;
+	--light: #e9ecef;
+	--dark: #772953;
+	--font-family-sans-serif: sintony, sans-serif;
+}*/

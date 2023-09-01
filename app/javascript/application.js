@@ -50,4 +50,4 @@ document.addEventListener('DOMContentLoaded', function() {
 		}); // end of document ready
 	})(jQuery); // end of jQuery name space
 
-	
+	import * as bootstrap from "bootstrap"

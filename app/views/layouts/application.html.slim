@@ -8,7 +8,7 @@ html
     = jquery_include_tag :google
     = javascript_include_tag "application", "data-turbo-track": "reload", defer: true, type: "module"
     link href="https://fonts.googleapis.com/css2?family=Sintony&display=swap" rel="stylesheet"
-    link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet"
+    // link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet"
     link[rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"]
     title Turbo Assisted Shipping
     meta[name="msapplication-TileColor" content="#da532c"]
@@ -41,9 +41,9 @@ html
 
   body 
     = render partial: 'partials/topnav'
-    = render partial: 'partials/auth'
+    // = render partial: 'partials/auth'
     == yield
-    = render partial: 'partials/fab'
-    = render partial: 'partials/footer'
+    // = render partial: 'partials/fab'
+    // = render partial: 'partials/footer'
 script
   | feather.replace()
